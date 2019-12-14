@@ -40,10 +40,10 @@ function readOutLoud(message) {
         const lettersText = splitText.slice(17);
         //var result = lettersText.replace(/,/g, "");
         console.log(lettersText);
-        speech.text = lettersText;
+        speech.text = `You spell ${message.slice(17)} like this:\n ${lettersText}`;
     }
     speech.volume = 1;
-    speech.rate = 0.5;
+    speech.rate = 0.2;
     speech.pitch = 1;
     
     window.speechSynthesis.speak(speech);
